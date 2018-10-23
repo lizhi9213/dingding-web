@@ -1,0 +1,35 @@
+{
+    // ����ָ����ת��Ĺ���
+    "presets": [
+        // env���ǽ������babel-preset-env�������������˵����babel��es6,es7,es8����ת�룬��������amd,commonjs������ģ�黯�ļ���������ת��
+        [
+            "env",
+            {
+                "modules": false
+            }
+        ],
+        // ��������ǲ�ͬ�׶γ��ֵ�es�﷨��������ͬ��ת����
+        "stage-2"
+    ],
+    // �������ѡ�������ò������������ת����transform-runtime��������ȫ�ֺ������Ż�babel����
+    "plugins": [
+        "transform-runtime",
+        "syntax-dynamic-import"
+    ],
+    // ����ָ���������ɵ��ļ��У�������ע��
+    "comments": false,
+    // ������������ض��Ļ�������ִ�е�ת����򣬵����������������test�ͻḲ�����������
+    "env": {
+        // test ����ǰ���õĻ������������û������BABEL_ENV��ʹ��NODE_ENV�������û������Ĭ�Ͼ���development
+        "test": {
+            "presets": [
+                "env",
+                "stage-2"
+            ],
+            // instanbul��һ����������ת������Ĺ���
+            "plugins": [
+                "istanbul"
+            ]
+        }
+    }
+}
